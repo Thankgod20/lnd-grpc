@@ -1,12 +1,12 @@
-# Mock LND gRPC Server
+# LND gRPC Server
 
-A simplified mock LND (Lightning Network Daemon) gRPC server designed to work with wallets like BlueWallet and LNDhub. This project allows you to test Lightning wallet functionality without running a fully-synced LND node.
+A simplified LND (Lightning Network Daemon) gRPC server designed to work with wallets and LNDhub. This project allows you to test Lightning wallet functionality without running a fully-synced LND node.
 
 This server simulates essential wallet features: creating invoices, generating on-chain addresses, and paying invoices.
 
 What Is This For?
 
-If you're developing a Lightning wallet or testing BlueWallet features without setting up a real node, this mock server is for you. It acts as a lightweight simulator that you can run locally.
+If you're developing a Lightning wallet or testing  features without setting up a real node, this mock server is for you. It acts as a lightweight simulator that you can run locally.
 
 It allows you to:
 
@@ -23,7 +23,7 @@ Features:
 * Address Logging: Saved in generated\_addresses.json
 * Secure by Default: Auto-generates TLS certs (tls.cert, tls.key) and admin.macaroon
 * Works with miniBTCD: Simulates a Bitcoin backend
-* BlueWallet Compatible: Full integration support
+
 
 Installation & Setup:
 
@@ -38,8 +38,8 @@ Prerequisites:
 Step 1: Download the Code
 
 ```
-mkdir my_lnd_mock
-cd my_lnd_mock
+mkdir my_lnd
+cd my_lnd
 git clone https://github.com/Thankgod20/miniBTCD
 git clone https://github.com/Thankgod20/LND-GRPC
 ```
@@ -47,15 +47,14 @@ git clone https://github.com/Thankgod20/LND-GRPC
 Step 2: Run miniBTCD
 
 ```
-cd miniBTCD
-go run .
+check the documentation
 ```
 
-Step 3: Run the Mock LND Server
+Step 3: Run the LND Server
 Open a new terminal:
 
 ```
-cd my_lnd_mock/LND-GRPC
+cd my_lnd/LND-GRPC
 go run .
 ```
 
@@ -76,7 +75,7 @@ Copy the string and restart server:
 go run .
 ```
 
-3. Add wallet in BlueWallet:
+3. Add to wallet:
 
 ```
 http://ip:3000
